@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.2-cli
+      - image: circleci/php:7.2-node-browsers
     working_directory: ~/laravel-boilerplate
     steps:
       - checkout
@@ -12,7 +12,6 @@ jobs:
       - run: sudo apt-get install -y libpng-dev
       - run: sudo docker-php-ext-install gd
       - run: sudo composer self-update
-      - run: npm install -g yarn
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
