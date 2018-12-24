@@ -10,7 +10,11 @@ class Hydrator extends EloquentHydrator
     /**
      * @var array|null
      */
-    protected $attributes = null;
+    protected $attributes = [
+        'first_name',
+        'last_name',
+        'email'
+    ];
 
     /**
      * @var array

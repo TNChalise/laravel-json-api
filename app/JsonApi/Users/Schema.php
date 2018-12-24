@@ -15,7 +15,11 @@ class Schema extends EloquentSchema
     /**
      * @var array|null
      */
-    protected $attributes = null;
+    protected $attributes = [
+        'uuid',
+        'full_name',
+        'email'
+    ];
 
 }
 
